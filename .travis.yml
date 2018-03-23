@@ -1,4 +1,4 @@
-language: c
+language: php
 
 os:
     - linux
@@ -17,6 +17,9 @@ services:
 env:
   global:
     - COMMIT=${TRAVIS_COMMIT::8}
+
+script:
+  - echo "No script to run"
 
 after_success:
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
