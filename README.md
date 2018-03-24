@@ -1,1 +1,2 @@
 # Ajarvis-Rest-Docker
+[![Build Status](https://travis-ci.org/PippoSwe/Ajarvis-Rest-Docker.svg?branch=master)](https://travis-ci.org/PippoSwe/Ajarvis-Rest-Docker) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cbf5ce6dc61b42e4a073a3fc845d6aa9)](https://www.codacy.com/app/Giglium/Ajarvis-Rest-Docker?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PippoSwe/Ajarvis-Rest-Docker&amp;utm_campaign=Badge_Grade)
