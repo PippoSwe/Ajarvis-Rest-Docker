@@ -23,6 +23,8 @@ RUN apt-get update && apt-get install -y ffmpeg
 RUN a2enmod rewrite
 ADD docker/php.addon.ini /usr/local/etc/php/conf.d/
 
+RUN a2enmod include
+
 EXPOSE 80
 EXPOSE 443
 CMD ["apache2-foreground"]
