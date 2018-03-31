@@ -25,6 +25,10 @@ ADD docker/php.addon.ini /usr/local/etc/php/conf.d/
 
 RUN a2enmod include
 
+RUN apt-get install -y locales
+RUN sed -i 's/^# *\(it_IT.UTF-8\)/\1/' /etc/locale.gen
+RUN locale-gen
+
 EXPOSE 80
 EXPOSE 443
 CMD ["apache2-foreground"]
