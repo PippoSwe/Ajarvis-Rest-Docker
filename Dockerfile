@@ -29,6 +29,13 @@ RUN apt-get install -y locales
 RUN sed -i 's/^# *\(it_IT.UTF-8\)/\1/' /etc/locale.gen
 RUN locale-gen
 
+RUN apt-get install -y cron
+RUN crontab -l | { cat; echo "* * * * * cd /var/www/html; /usr/local/bin/php index.php batch/google index"; } | crontab -
+
+ADD docker/web-boot.sh /tmp/web-boot.sh
+RUN chmod 777 /tmp/web-boot.sh
+
 EXPOSE 80
 EXPOSE 443
-CMD ["apache2-foreground"]
+CMD ["/tmp/web-boot.sh"]
+#CMD ["apache2-foreground"]
